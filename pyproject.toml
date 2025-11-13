@@ -4,4 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "calc_binding_alistaire_noiprasit"
-version = "0.1.0"
+version = "0.2.0"
+dependencies = [
+    "tqdm~=4.64.1",
+]
+
+[project.scripts]
+calc_binding_alistaire_noiprasit = "calc_binding_alistaire_noiprasit.__main__:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest~=7.2.0",
+    "pytest-cov~=4.0.0",
+    "pre-commit~=2.20.0","ruff~=0.0.288","tox~=4.7.0"
+]
